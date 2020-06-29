@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Validation</title>
+</head>
+<body>
+<h3>Credit Card Validation</h3>
+   <form th:action="@{/validate}">
+      <label>Enter the card number :</label>
+       <input type="text" th:name="cardnumber" required placeholder="XXXX XXXX XXXX XXXX" minlength="16" pattern="[^0]">
+       <label>Expiry date :</label>
+       <select th:name="expirydate">
+           <option>01</option>
+           <option>02</option>
+           <option>03</option>
+           <option>04</option>
+           <option>05</option>
+           <option>06</option>
+           <option>07</option>
+           <option>08</option>
+           <option>09</option>
+           <option>10</option>
+           <option>11</option>
+           <option>12</option>
+       </select>
+       <label>/</label>
+       <input style="width:30px" th:name="year" placeholder="20">
+       <button type="submit">Validate</button>
+   </form>
+</body>
+</html>
