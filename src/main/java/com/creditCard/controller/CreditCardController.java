@@ -17,10 +17,10 @@ public class CreditCardController {
                                      @RequestParam("year") String year)
     {
         CreditCardBean cardBean = creditCardService.validateCard(cardnum,month,year);
-        if(cardBean!=null)
+        if(cardBean.getCardType()!=null && cardBean.getCardNum()!=null)
         return cardBean.toString();
         else
-            return "Welcome to credit card validation screen";
+            return "Enter the accurate Card details(Only Visa and Master Card accepted)";
     }
 
 }

@@ -8,8 +8,9 @@
 <h3>Credit Card Validation</h3>
    <form th:action="@{/validate}">
       <label>Enter the card number :</label>
-       <input type="text" th:name="cardnumber" required placeholder="XXXX XXXX XXXX XXXX" minlength="16" pattern="[^0]">
+       <input type="text" th:name="cardnumber" required placeholder="XXXX XXXX XXXX XXXX" minlength="16">
        <label>Expiry date :</label>
+       <label>MM</label>
        <select th:name="expirydate">
            <option>01</option>
            <option>02</option>
@@ -25,7 +26,8 @@
            <option>12</option>
        </select>
        <label>/</label>
-       <input style="width:30px" th:name="year" placeholder="20">
+       <label>YY</label>
+       <input style="width:30px" th:name="year" placeholder="20" maxlength="2">
        <button type="submit">Validate</button>
    </form>
 </body>

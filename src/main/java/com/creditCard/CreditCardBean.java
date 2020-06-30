@@ -51,7 +51,7 @@ public class CreditCardBean {
 
     @Override
     public String toString() {
-        return "CreditCardBean  " + "\n" +
+        return "CreditCardDetails " + "\n" +
                 "cardType='" + cardType + '\'' +
                 ", cardNum=" + cardNum +
                 ", expirymonth=" + exmonth +
